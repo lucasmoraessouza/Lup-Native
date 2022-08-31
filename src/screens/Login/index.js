@@ -10,7 +10,7 @@ export function Login() {
   const { primary, secondary } = theme.colors
 
   return (
-    <View style={styles.container}>
+    <Animatable.View style={styles.container} >
       <LinearGradient style={styles.linear} colors={[secondary, primary]} start={{ x: 0.0, y: 0.45 }} end={{ x: 1, y: 0 }}>
         <Animatable.View style={styles.header} animation="flipInY" delay={600}>
           <Image
@@ -29,14 +29,14 @@ export function Login() {
             style={styles.input}
             placeholderTextColor="#FFF"
           />
-          <Text style={styles.passwordText}>Esqueci minha senha</Text>
+          <Text style={styles.passwordText} onPress={() => navigation.navigate("ForgotPassword")}>Esqueci minha senha</Text>
           <TouchableOpacity
             onPress={() => navigation.navigate("Home")}
             style={styles.button}
           >
             <Text style={styles.buttonText}>Entrar</Text>
           </TouchableOpacity>
-          <Text style={styles.infoText}>Ou faça login usando</Text>
+          <Text style={styles.infoText} >Ou faça login usando</Text>
           <View style={styles.containerButtons}>
             <TouchableOpacity style={styles.buttonFacebook}>
               <Text style={styles.buttonTextFacebook}>Facebook</Text>
@@ -56,6 +56,6 @@ export function Login() {
           </View>
         </Animatable.View>
       </LinearGradient>
-    </View>
+    </Animatable.View>
   )
 }

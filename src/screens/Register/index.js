@@ -3,9 +3,12 @@ import { LinearGradient } from "expo-linear-gradient"
 import { styles } from "./styles"
 import { theme } from "../../global/styles/theme"
 import * as Animatable from 'react-native-animatable'
+import { useNavigation } from "@react-navigation/native"
 
 
 export function Register() {
+  const navigation = useNavigation()
+
   const { primary, secondary } = theme.colors
 
   return (
@@ -41,6 +44,9 @@ export function Register() {
           />
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Criar conta</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonOutlined} onPress={() => navigation.navigate("Login")}>
+            <Text style={styles.buttonTextOutlined} >Voltar</Text>
           </TouchableOpacity>
         </View>
       </LinearGradient>

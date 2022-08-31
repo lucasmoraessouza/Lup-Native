@@ -7,7 +7,7 @@ import { AppStack } from "./AppStack"
 import { AuthStack } from "./AuthStack";
 
 export default function Routes() {
-  const auth = false;
+  const auth = true;
   return (
     <>
       <NavigationContainer>

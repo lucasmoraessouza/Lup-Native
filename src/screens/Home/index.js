@@ -23,17 +23,6 @@ export function Home() {
         </View>
         <View style={styles.containerTabs}>
           <Tabs />
-
-          
-
-
-
-
-
-
-
-
-
         </View>
       </LinearGradient>
     </View>
