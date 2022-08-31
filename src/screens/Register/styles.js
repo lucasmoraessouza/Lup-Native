@@ -53,4 +53,23 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     fontFamily: theme.fonts.title700,
   },
+  buttonOutlined: {
+    background: 'transparent',
+    color: theme.colors.white,
+    fontSize: 14,
+    borderColor: theme.colors.white,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderRadius: 22,
+    paddingVertical: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 25,
+
+  },
+  buttonTextOutlined: {
+    color: theme.colors.white,
+    fontSize: 20,
+    fontFamily: theme.fonts.title600,
+  },
 })

@@ -2,9 +2,12 @@ import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer"
 import { CustomDrawer } from "../components/CustomDrawer";
 import { Home } from "../screens/Home";
-import { NotificationsScreen } from '../screens/Notifications'
 import { theme } from '../global/styles/theme'
-
+import { Announcement } from '../screens/Announcement'
+import { Budget } from '../screens/Budget'
+import { Calculate } from '../screens/Calculate'
+import { Logout } from '../screens/Logout'
+import { Schedule } from '../screens/Schedule'
 const Drawer = createDrawerNavigator()
 
 export function AppStack() {
@@ -26,10 +29,25 @@ export function AppStack() {
                 component={Home}
             />
             <Drawer.Screen
-                name="Notifications"
-                component={NotificationsScreen}
+                name="Calculadora de Custos"
+                component={Calculate}
             />
-
+            <Drawer.Screen
+                name="Agenda"
+                component={Schedule}
+            />
+            <Drawer.Screen
+                name="Orçamentos"
+                component={Budget}
+            />
+            <Drawer.Screen
+                name="Atualizar Anúncio"
+                component={Announcement}
+            />
+            <Drawer.Screen
+                name="Sair"
+                component={Logout}
+            />
         </Drawer.Navigator >
 
     )
