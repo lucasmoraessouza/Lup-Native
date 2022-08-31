@@ -29,6 +29,14 @@ export function AppStack() {
                 name="Notifications"
                 component={NotificationsScreen}
             />
+            <Drawer.Screen
+                name="Eventos"
+                component={NotificationsScreen}
+            />
+            <Drawer.Screen
+                name="Anúncio"
+                component={NotificationsScreen}
+            />
 
         </Drawer.Navigator >
 

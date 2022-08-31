@@ -1,11 +1,9 @@
 import { View, Text, Image } from "react-native"
 import { theme } from "../../global/styles/theme"
 import { LinearGradient } from "expo-linear-gradient"
-import { useNavigation } from "@react-navigation/native"
 import { styles } from "./styles"
-
+import { Tabs } from "../Home/components/tabs"
 export function Home() {
-  const navigation = useNavigation()
   const { primary, secondary } = theme.colors
 
   return (
@@ -20,35 +18,22 @@ export function Home() {
           <Image
             style={styles.logo}
             source={require("../../assets/images/newLogo.png")}
+            resizeMode="contain"
           />
         </View>
-        <View style={styles.sectionTabs}>
-          <View
-            style={{
-              width: "100%",
-              alignItems: "center",
-            }}
-          >
-            <View
-              style={{
-                flexDirection: "row",
-                width: "80%",
-                height: 100,
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <View>
-                <Text>Solicitações</Text>
-              </View>
-              <View>
-                <Text>Próximos Eventos</Text>
-              </View>
-              <View>
-                <Text>Meu Anúncio</Text>
-              </View>
-            </View>
-          </View>
+        <View style={styles.containerTabs}>
+          <Tabs />
+
+          
+
+
+
+
+
+
+
+
+
         </View>
       </LinearGradient>
     </View>

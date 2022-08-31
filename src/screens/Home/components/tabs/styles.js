@@ -1,29 +1,6 @@
 import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  linear: {
-    width: "100%",
-  },
-  header: {
-    marginTop: 35,
-    alignItems: "center",
-  },
-  logo: {
-    width: 80,
-    height: 80,
-  },
-  containerTabs: {
-    backgroundColor: "#fff",
-    width: "100%",
-    height: "100%",
-    marginTop: 10,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-  },
-
   sectionTabs: {
     width: "100%",
     alignItems: "center",
@@ -39,16 +16,21 @@ export const styles = StyleSheet.create({
 
   cardTabs: {
     alignItems: "center",
-    width: 90,
+    width: 'auto',
+    paddingBottom: 10,
   },
 
-  cardTabs2: {
+  cardTabsBorder: {
     alignItems: "center",
-    width: 130,
+    width: 'auto',
+    borderBottomColor: "#A5406E",
+    borderBottomWidth: 3,
+    paddingBottom: 5,
   },
 
   iconsTabs: {
     width: 50,
     height: 35,
+    marginBottom:3
   },
 })
