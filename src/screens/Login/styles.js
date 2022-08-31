@@ -84,7 +84,8 @@ export const styles = StyleSheet.create({
     paddingVertical: 15,
     marginTop: 8,
     justifyContent: "center",
-    alignItems: "center",  },
+    alignItems: "center",
+  },
   buttonTextFacebook: {
     color: theme.colors.white,
     fontSize: 20,

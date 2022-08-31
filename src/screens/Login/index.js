@@ -3,6 +3,7 @@ import { LinearGradient } from "expo-linear-gradient"
 import { styles } from "./styles"
 import { theme } from "../../global/styles/theme"
 import { useNavigation } from "@react-navigation/native"
+import * as Animatable from 'react-native-animatable'
 
 export function Login() {
   const navigation = useNavigation()
@@ -10,14 +11,14 @@ export function Login() {
 
   return (
     <View style={styles.container}>
-      <LinearGradient style={styles.linear} colors={[primary, secondary]}>
-        <View style={styles.header}>
+      <LinearGradient style={styles.linear} colors={[secondary, primary]} start={{ x: 0.0, y: 0.45 }} end={{ x: 1, y: 0 }}>
+        <Animatable.View style={styles.header} animation="flipInY" delay={600}>
           <Image
-            source={require("../../assets/images/Logo.png")}
             style={styles.logo}
+            source={require("../../assets/images/Logo.png")}
           />
-        </View>
-        <View style={styles.containerForm}>
+        </Animatable.View>
+        <Animatable.View style={styles.containerForm} animation="fadeInUp">
           <TextInput
             placeholder="E-mail"
             style={styles.input}
@@ -53,7 +54,7 @@ export function Login() {
               Clique aqui
             </Text>
           </View>
-        </View>
+        </Animatable.View>
       </LinearGradient>
     </View>
   )
