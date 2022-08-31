@@ -22,13 +22,14 @@ export function AppStack() {
             },
         }}>
             <Drawer.Screen
-                name="Home"
+                name="Inicio"
                 component={Home}
             />
             <Drawer.Screen
                 name="Notifications"
                 component={NotificationsScreen}
             />
+
         </Drawer.Navigator >
 
     )
