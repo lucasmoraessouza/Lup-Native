@@ -4,7 +4,7 @@ import { theme } from "../../global/styles/theme"
 
 const { primary, secondary } = theme.colors
 
-export const Container = styled.SafeAreaView`
+export const Container = styled.View`
   flex: 1;
 `
 export const Linear = styled(LinearGradient).attrs({
