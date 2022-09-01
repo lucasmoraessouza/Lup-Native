@@ -4,12 +4,15 @@ export const RegisterContext = createContext({})
 
 export default function CountProvider({ children }) {
   const [components, setComponents] = useState(0)
+  const [subComponents, setSubComponents] = useState(0)
 
   return (
     <RegisterContext.Provider
       value={{
         components,
         setComponents,
+        subComponents,
+        setSubComponents
       }}
     >
       {children}
@@ -20,9 +23,12 @@ export default function CountProvider({ children }) {
 export function StateGlobal() {
   const context = useContext(RegisterContext)
   const { components, setComponents } = context
+  const { subComponents, setSubComponents } = context
 
   return {
     components,
     setComponents,
+    subComponents,
+    setSubComponents
   }
 }
