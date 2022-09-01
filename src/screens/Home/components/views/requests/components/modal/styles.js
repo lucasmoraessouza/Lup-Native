@@ -13,8 +13,10 @@ export const styles = StyleSheet.create({
   },
 
   imgClient: {
-    width: 80,
-    height: 80,
+    width: 100,
+    height: 100,
+    marginTop: 10,
+    marginBottom: 10,
   },
 
   containerBtn: {
@@ -59,7 +61,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00000025",
+    backgroundColor: "#00000070",
   },
 
   modalContainer: {
@@ -82,5 +84,11 @@ export const styles = StyleSheet.create({
     justifyContent: "space-around",
     paddingTop: 10,
     paddingBottom: 5,
+  },
+
+  subCardInfo: {
+    width: "40%",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
   },
 })

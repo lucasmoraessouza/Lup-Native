@@ -21,24 +21,26 @@ export function ModalInfo(props) {
                 source={require("../../../../../../../assets/images/home/FotoCliente.png")}
               />
             </View>
-            <View style={styles.containerModalInfo}>
-              <View>
-                <Text>Nome: </Text>
-                <Text>Renato Mendes</Text>
+            <View>
+              <View style={styles.containerModalInfo}>
+                <View style={styles.subCardInfo}>
+                  <Text>Nome: </Text>
+                  <Text>Renato Mendes</Text>
+                </View>
+                <View style={styles.subCardInfo}>
+                  <Text>Tipo de evento: </Text>
+                  <Text>confraternização</Text>
+                </View>
               </View>
-              <View>
-                <Text>Nome: </Text>
-                <Text>Renato Mendes</Text>
-              </View>
-            </View>
-            <View style={styles.containerModalInfo}>
-              <View>
-                <Text>Nome: </Text>
-                <Text>Renato Mendes</Text>
-              </View>
-              <View>
-                <Text>Nome: </Text>
-                <Text>Renato Mendes</Text>
+              <View style={styles.containerModalInfo}>
+                <View style={styles.subCardInfo}>
+                  <Text>Data: </Text>
+                  <Text>17/06/2021</Text>
+                </View>
+                <View style={styles.subCardInfo}>
+                  <Text>Local: </Text>
+                  <Text>Campinas - SP</Text>
+                </View>
               </View>
             </View>
 
