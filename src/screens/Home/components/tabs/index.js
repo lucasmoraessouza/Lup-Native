@@ -24,7 +24,7 @@ export function Tabs() {
               source={require("../../../../assets/images/home/envelope.png")}
               resizeMode="contain"
             />
-            <Text>Solicitações</Text>
+            <Text style={styles.textTabs}>Solicitações</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -40,7 +40,7 @@ export function Tabs() {
               source={require("../../../../assets/images/home/heart.png")}
               resizeMode="contain"
             />
-            <Text>Próximos Eventos</Text>
+            <Text style={styles.textTabs}>Próximos Eventos</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -56,7 +56,7 @@ export function Tabs() {
               source={require("../../../../assets/images/home/user.png")}
               resizeMode="contain"
             />
-            <Text>Meu Anúncio</Text>
+            <Text style={styles.textTabs}>Meu Anúncio</Text>
           </View>
         </TouchableOpacity>
       </View>

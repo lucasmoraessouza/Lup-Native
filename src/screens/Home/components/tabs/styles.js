@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+import { theme } from "../../../../global/styles/theme"
 
 export const styles = StyleSheet.create({
   sectionTabs: {
@@ -16,21 +17,25 @@ export const styles = StyleSheet.create({
 
   cardTabs: {
     alignItems: "center",
-    width: 'auto',
+    width: "auto",
     paddingBottom: 10,
   },
 
   cardTabsBorder: {
     alignItems: "center",
-    width: 'auto',
+    width: "auto",
     borderBottomColor: "#A5406E",
     borderBottomWidth: 3,
     paddingBottom: 5,
   },
 
+  textTabs: {
+    fontFamily: theme.fonts.text400,
+  },
+
   iconsTabs: {
     width: 40,
     height: 25,
-    marginBottom:3
+    marginBottom: 3,
   },
 })
