@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   sectionTabsAline: {
     flexDirection: "row",
     width: "90%",
-    height: 120,
+    height: 100,
     justifyContent: "space-between",
     alignItems: "center",
   },
@@ -29,8 +29,8 @@ export const styles = StyleSheet.create({
   },
 
   iconsTabs: {
-    width: 50,
-    height: 35,
+    width: 40,
+    height: 25,
     marginBottom:3
   },
 })
