@@ -3,8 +3,14 @@ import { theme } from "../../global/styles/theme"
 import { LinearGradient } from "expo-linear-gradient"
 import { styles } from "./styles"
 import { Tabs } from "../Home/components/tabs"
+import { Requests } from "./components/views/requests"
+import { MyAds } from "./components/views/myAds"
+import { NextEvents } from "./components/views/nextEvents"
+import { StateGlobal } from "../../context/context"
+
 export function Home() {
   const { primary, secondary } = theme.colors
+  const { components } = StateGlobal()
 
   return (
     <View style={styles.container}>
@@ -21,8 +27,20 @@ export function Home() {
             resizeMode="contain"
           />
         </View>
+
         <View style={styles.containerTabs}>
           <Tabs />
+
+          {components === 0 ? (
+            <Requests />
+          ) : components === 1 ? (
+            <NextEvents />
+          ) : components === 2 ? (
+            <MyAds />
+          ) : (
+            ""
+          )}
+
         </View>
       </LinearGradient>
     </View>

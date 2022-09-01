@@ -1,15 +1,24 @@
 import { View, Text, Image, TouchableOpacity } from "react-native"
 import { styles } from "../tabs/styles"
 import { useNavigation } from "@react-navigation/native"
+import { useState } from "react"
+import { StateGlobal } from "../../../../context/context"
 
-export function Tabs(props) {
+export function Tabs() {
   const navigation = useNavigation()
+  const { components, setComponents } = StateGlobal()
 
   return (
     <View style={styles.sectionTabs}>
       <View style={styles.sectionTabsAline}>
-        <TouchableOpacity onPress={() => navigation.navigate("Inicio")}>
-          <View style={styles.cardTabsBorder}>
+        <TouchableOpacity
+          onPress={() => {
+            setComponents(0)
+          }}
+        >
+          <View
+            style={components === 0 ? styles.cardTabsBorder : styles.cardTabs}
+          >
             <Image
               style={styles.iconsTabs}
               source={require("../../../../assets/images/home/envelope.png")}
@@ -18,8 +27,14 @@ export function Tabs(props) {
             <Text>Solicitações</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("Eventos")}>
-          <View style={styles.cardTabs}>
+        <TouchableOpacity
+          onPress={() => {
+            setComponents(1)
+          }}
+        >
+          <View
+            style={components === 1 ? styles.cardTabsBorder : styles.cardTabs}
+          >
             <Image
               style={styles.iconsTabs}
               source={require("../../../../assets/images/home/heart.png")}
@@ -28,8 +43,14 @@ export function Tabs(props) {
             <Text>Próximos Eventos</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("Anúncio")}>
-          <View style={styles.cardTabs}>
+        <TouchableOpacity
+          onPress={() => {
+            setComponents(2)
+          }}
+        >
+          <View
+            style={components === 2 ? styles.cardTabsBorder : styles.cardTabs}
+          >
             <Image
               style={styles.iconsTabs}
               source={require("../../../../assets/images/home/user.png")}

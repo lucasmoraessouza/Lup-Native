@@ -1,14 +1,13 @@
-import 'react-native-gesture-handler'
+import "react-native-gesture-handler"
 import React, { useEffect } from "react"
 import { StatusBar } from "react-native"
 import { useFonts } from "expo-font"
-
+import  ContextProvider  from "./src/context/context"
 import {
   OpenSans_400Regular,
   OpenSans_600SemiBold,
   OpenSans_700Bold,
 } from "@expo-google-fonts/open-sans"
-import { NavigationContainer } from "@react-navigation/native"
 import Routes from "./src/routes/Router"
 import * as SplashScreen from "expo-splash-screen"
 
@@ -33,13 +32,13 @@ export default function App() {
   }
 
   return (
-    <>
+    <ContextProvider>
       <StatusBar
         barStyle="light-content"
         backgroundColor="#000"
         translucent={false}
       />
       <Routes />
-    </>
+    </ContextProvider>
   )
 }
