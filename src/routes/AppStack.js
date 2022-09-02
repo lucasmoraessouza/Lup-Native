@@ -8,6 +8,7 @@ import { Budget } from '../screens/Budget'
 import { Calculate } from '../screens/Calculate'
 import { Logout } from '../screens/Logout'
 import { Schedule } from '../screens/Schedule'
+import { Profile } from '../screens/Profile'
 const Drawer = createDrawerNavigator()
 
 export function AppStack() {
@@ -31,6 +32,10 @@ export function AppStack() {
             <Drawer.Screen
                 name="Calculadora de Custos"
                 component={Calculate}
+            />
+            <Drawer.Screen
+                name="Editar Perfil"
+                component={Profile}
             />
             <Drawer.Screen
                 name="Agenda"

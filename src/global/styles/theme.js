@@ -5,7 +5,9 @@ export const theme = {
         white: '#FFF',
         line: "#ED4C67",
         on: "#C4E538",
-        gray: '#5F5F5F'
+        gray: '#5F5F5F',
+        light_gray: '#DADADA',
+        purple: '#A5406E'
     },
 
     fonts: {

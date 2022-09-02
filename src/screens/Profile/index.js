@@ -4,7 +4,7 @@ import { LinearGradient } from "expo-linear-gradient"
 import { styles } from "./styles"
 import { ScrollView } from "react-native-gesture-handler"
 
-export function Announcement() {
+export function Profile() {
     const { primary, secondary } = theme.colors
 
     return (
@@ -16,38 +16,32 @@ export function Announcement() {
                 end={{ x: 1, y: 0 }}
             >
                 <View style={styles.header}>
+                    <Image
+                        style={styles.logo}
+                        source={require("../../assets/images/newLogo.png")}
+                        resizeMode="contain"
+                    />
                 </View>
                 <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
 
-                    <Text style={styles.title}>Atualizar anúncio</Text>
-                    <View style={styles.containerLogoCompany}>
-                        <Image
-                            resizeMode="contain"
-                            style={styles.logoCompany}
-                            source={require("../../assets/images/LogoFornecedor.png")}
-                        />
-                        <Text style={styles.textPhoto}> Alterar foto</Text>
-                    </View>
-                    <Text style={styles.subtitle}>Dados da empresa</Text>
+                    <Text style={styles.title}>Editar Perfil</Text>
+                    <Text style={styles.subtitle}>Dados pessoais</Text>
                     <View style={styles.form}>
                         <Text style={styles.label}>Nome</Text>
                         <TextInput style={styles.input} />
-                        <Text style={styles.label}>Tipo de serviço</Text>
+                        <Text style={styles.label}>Telefone</Text>
                         <TextInput style={styles.input} />
-                        <Text style={styles.label}>Contato</Text>
+                        <Text style={styles.label}>Celular</Text>
                         <TextInput style={styles.input} />
-                        <Text style={styles.label}>Localização</Text>
+                        <Text style={styles.label}>E-mail</Text>
                         <TextInput style={styles.input} />
-
-                    </View>
-                    <Text style={styles.subtitle}>Descrição</Text>
-                    <View style={styles.form}>
-                        <Text style={styles.label}>Sobre nós</Text>
-                        <View style={styles.textAreaContainer}>
-                            <TextInput style={styles.textArea} multiline={true}
-                                numberOfLines={4} />
-                        </View>
-                        <Text style={styles.textEnd}>Até 500 caracteres</Text>
+                        <Text style={styles.subtitle}>Atualizar senha</Text>
+                        <Text style={styles.label}>Senha atual</Text>
+                        <TextInput style={styles.input} />
+                        <Text style={styles.label}>Nova senha</Text>
+                        <TextInput style={styles.input} />
+                        <Text style={styles.label}>Confirmar nova senha</Text>
+                        <TextInput style={styles.input} />
                         <TouchableOpacity style={styles.button}>
                             <Text style={styles.buttonText}>Salvar Alterações</Text>
                         </TouchableOpacity>
