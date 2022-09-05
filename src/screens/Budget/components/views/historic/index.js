@@ -1,7 +1,8 @@
 import { FlatList, Text, View } from "react-native"
+import { BudgetCardStatus } from "./components/budgetCardStatus"
 import { styles } from "./styles"
-import { BudgetCard } from "./components/budgetCard/index"
-export function Requests() {
+
+export function Historic() {
   const test = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
   return (
@@ -10,7 +11,7 @@ export function Requests() {
         showsVerticalScrollIndicator={false}
         data={test}
         keyExtractor={(item) => item}
-        renderItem={({ item }) => <BudgetCard key={item} name={item} />}
+        renderItem={({ item }) => <BudgetCardStatus key={item} name={item} />}
       />
     </View>
   )

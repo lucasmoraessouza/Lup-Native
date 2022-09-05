@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity } from "react-native"
-import { styles } from "../tabs/styles"
+import { styles } from "./styles"
 import { useNavigation } from "@react-navigation/native"
 import { useState } from "react"
 import { StateGlobal } from "../../../../context/context"
