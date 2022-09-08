@@ -100,7 +100,7 @@ export function Schedule() {
 
               {test.map((item, index) => {
                 return (
-                  <>
+                  <View key={index}>
                     <View style={styles.eventCard}>
                       <View style={styles.card}>
                         <Text style={styles.textCard}>
@@ -132,7 +132,7 @@ export function Schedule() {
                         color={theme.colors.white}
                       />
                     </View>
-                  </>
+                  </View>
                 )
               })}
             </View>
