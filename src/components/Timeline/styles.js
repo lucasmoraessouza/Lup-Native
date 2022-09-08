@@ -55,5 +55,5 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.text400,
     fontSize: 14,
     color: theme.colors.white
-  }
+  },
 })
