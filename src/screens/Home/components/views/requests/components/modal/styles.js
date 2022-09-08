@@ -77,6 +77,7 @@ export const styles = StyleSheet.create({
 
   containerModalBtn: {
     flexDirection: "row",
+    justifyContent: 'center'
   },
 
   containerModalInfo: {

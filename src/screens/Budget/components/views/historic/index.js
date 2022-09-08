@@ -1,4 +1,5 @@
-import { FlatList, Text, View } from "react-native"
+import { useState } from "react"
+import { FlatList, View } from "react-native"
 import { BudgetCardStatus } from "./components/budgetCardStatus"
 import { styles } from "./styles"
 
