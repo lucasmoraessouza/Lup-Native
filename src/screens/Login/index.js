@@ -22,12 +22,12 @@ export function Login() {
           <TextInput
             placeholder="E-mail"
             style={styles.input}
-            placeholderTextColor="#FFF"
+            placeholderTextColor={theme.colors.white}
           />
           <TextInput
             placeholder="Senha"
             style={styles.input}
-            placeholderTextColor="#FFF"
+            placeholderTextColor={theme.colors.white}
           />
           <Text style={styles.passwordText} onPress={() => navigation.navigate("ForgotPassword")}>Esqueci minha senha</Text>
           <TouchableOpacity

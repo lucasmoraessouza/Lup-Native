@@ -23,7 +23,7 @@ export function ForgotPassword() {
                     <TextInput
                         placeholder="Email de cadastro"
                         style={styles.input}
-                        placeholderTextColor="#FFF"
+                        placeholderTextColor={theme.colors.white}
                     />
                     <TouchableOpacity style={styles.button}>
                         <Text style={styles.buttonText}>Enviar senha temporária</Text>

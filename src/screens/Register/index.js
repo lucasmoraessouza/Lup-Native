@@ -25,22 +25,22 @@ export function Register() {
           <TextInput
             placeholder="Nome Completo"
             style={styles.input}
-            placeholderTextColor="#FFF"
+            placeholderTextColor={theme.colors.white}
           />
           <TextInput
             placeholder="E-mail"
             style={styles.input}
-            placeholderTextColor="#FFF"
+            placeholderTextColor={theme.colors.white}
           />
           <TextInput
             placeholder="Senha"
             style={styles.input}
-            placeholderTextColor="#FFF"
+            placeholderTextColor={theme.colors.white}
           />
           <TextInput
             placeholder="Confirmar Senha"
             style={styles.input}
-            placeholderTextColor="#FFF"
+            placeholderTextColor={theme.colors.white}
           />
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Criar conta</Text>
