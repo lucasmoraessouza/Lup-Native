@@ -27,8 +27,8 @@ export const styles = StyleSheet.create({
   },
 
   menu: {
-    width: 40,
-    height: 40,
+    width: 35,
+    height: 35,
   },
 
 
