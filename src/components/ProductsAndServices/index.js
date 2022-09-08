@@ -15,7 +15,7 @@ export function ProductsAndServices() {
                     <View style={styles.containerInfo}>
                         <View>
                             <View style={styles.rowStyleInfo}>
-                                <Text style={{ fontWeight: "bold", marginRight: 5 }}>
+                                <Text >
                                     Descrição:
                                 </Text>
                                 <Text style={styles.subTitleInfo}>
@@ -23,13 +23,13 @@ export function ProductsAndServices() {
                                 </Text>
                             </View>
                             <View style={styles.rowStyleInfo}>
-                                <Text style={{ fontWeight: "bold", marginRight: 5 }}>
+                                <Text >
                                     Qntd:
                                 </Text>
                                 <Text style={styles.subTitleInfo}>150</Text>
                             </View>
                             <View style={styles.rowStyleInfo}>
-                                <Text style={{ fontWeight: "bold", marginRight: 5 }}>
+                                <Text >
                                     Valor Unit.:
                                 </Text>
                                 <Text style={styles.subTitleInfo}>R$50,00</Text>

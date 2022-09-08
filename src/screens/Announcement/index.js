@@ -17,7 +17,7 @@ export function Announcement() {
                 end={{ x: 1, y: 0 }}
             >
                 <View style={styles.header}>
-                    <Header/>
+                    <Header />
                 </View>
                 <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
 
@@ -50,12 +50,15 @@ export function Announcement() {
                                 numberOfLines={4} />
                         </View>
                         <Text style={styles.textEnd}>Até 500 caracteres</Text>
-                        <TouchableOpacity style={styles.button}>
-                            <Text style={styles.buttonText}>Salvar Alterações</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttonOutlined}>
-                            <Text style={styles.buttonTextOutlined}>Cancelar</Text>
-                        </TouchableOpacity>
+                        <View style={{ paddingBottom: 160 }}>
+
+                            <TouchableOpacity style={styles.button}>
+                                <Text style={styles.buttonText}>Salvar Alterações</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.buttonOutlined}>
+                                <Text style={styles.buttonTextOutlined}>Cancelar</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
                 </ScrollView>
             </LinearGradient>

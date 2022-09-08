@@ -48,7 +48,6 @@ export const styles = StyleSheet.create({
     subTitleInfoBold: {
         fontSize: 15,
         fontFamily: theme.fonts.title700,
-        fontWeight: 700,
         marginRight: 5,
         marginTop: 20
     },

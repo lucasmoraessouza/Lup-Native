@@ -37,12 +37,15 @@ export function Profile() {
             <TextInput style={styles.input} />
             <Text style={styles.label}>Confirmar nova senha</Text>
             <TextInput style={styles.input} />
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>Salvar Alterações</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.buttonOutlined}>
-              <Text style={styles.buttonTextOutlined}>Cancelar</Text>
-            </TouchableOpacity>
+            <View style={{ paddingBottom: 160 }}>
+
+              <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>Salvar Alterações</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.buttonOutlined}>
+                <Text style={styles.buttonTextOutlined}>Cancelar</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </ScrollView>
       </LinearGradient>
