@@ -1,12 +1,14 @@
-import { View, Text, Image } from "react-native"
+import { useState } from "react"
 import { styles } from "./styles"
+import { View, Text, Image } from "react-native"
 import { TabsAds } from "../../../../../components/TabsAds"
 import { StateGlobal } from "../../../../../context/context"
 import { AboutUs } from "../../../../../components/AboutUs"
 import { Media } from "../../../../../components/Media"
-
+import { TouchableOpacity } from "react-native-gesture-handler"
 export function MyAds() {
   const { subComponents } = StateGlobal()
+
   return (
     <>
       <View style={styles.container}>
@@ -38,7 +40,10 @@ export function MyAds() {
           {subComponents === 0 ? (
             <AboutUs />
           ) : subComponents === 1 ? (
-            <Media />
+            <>
+              <Media />
+
+            </>
           ) : (
             ""
           )}
