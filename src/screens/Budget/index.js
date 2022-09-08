@@ -6,7 +6,7 @@ import { StateGlobal } from "../../context/context"
 import { TabsBudget } from "./components/tabs"
 import { Historic } from "./components/views/historic"
 import { Summary } from "./components/views/summary"
-import { Headers } from "../../components/Header"
+import { Header } from "../../components/Header"
 
 export function Budget() {
   const { primary, secondary } = theme.colors
@@ -20,7 +20,7 @@ export function Budget() {
         start={{ x: 0.0, y: 0.45 }}
         end={{ x: 1, y: 0 }}
       >
-        <Headers />
+        <Header />
 
         <View style={styles.containerTabs}>
           <TabsBudget />

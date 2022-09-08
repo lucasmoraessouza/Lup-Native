@@ -3,7 +3,7 @@ import { theme } from "../../global/styles/theme"
 import { LinearGradient } from "expo-linear-gradient"
 import { styles } from "./styles"
 import { ScrollView } from "react-native-gesture-handler"
-import { Headers } from "../../components/Header"
+import { Header } from "../../components/Header"
 
 export function Profile() {
   const { primary, secondary } = theme.colors
@@ -16,7 +16,7 @@ export function Profile() {
         start={{ x: 0.0, y: 0.45 }}
         end={{ x: 1, y: 0 }}
       >
-        <Headers />
+        <Header />
 
         <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
           <Text style={styles.title}>Editar Perfil</Text>

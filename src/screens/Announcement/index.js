@@ -3,7 +3,7 @@ import { theme } from "../../global/styles/theme"
 import { LinearGradient } from "expo-linear-gradient"
 import { styles } from "./styles"
 import { ScrollView } from "react-native-gesture-handler"
-import { Headers } from "../../components/Header"
+import { Header } from "../../components/Header"
 
 export function Announcement() {
     const { primary, secondary } = theme.colors
@@ -17,7 +17,7 @@ export function Announcement() {
                 end={{ x: 1, y: 0 }}
             >
                 <View style={styles.header}>
-                    <Headers/>
+                    <Header/>
                 </View>
                 <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
 

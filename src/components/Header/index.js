@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native"
 import { Image, TouchableOpacity, View } from "react-native"
 import { styles } from "./styles"
 
-export function Headers() {
+export function Header() {
   const navigation = useNavigation()
 
   return (

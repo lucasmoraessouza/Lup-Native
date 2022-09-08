@@ -8,7 +8,7 @@ import { MyAds } from "./components/views/myAds"
 import { NextEvents } from "./components/views/nextEvents"
 import { StateGlobal } from "../../context/context"
 import { useNavigation } from "@react-navigation/native"
-import { Headers } from "../../components/Header"
+import { Header } from "../../components/Header"
 
 export function Home() {
   const navigation = useNavigation()
@@ -24,7 +24,7 @@ export function Home() {
         end={{ x: 1, y: 0 }}
       >
         
-      <Headers />
+      <Header />
 
         <View style={styles.containerTabs}>
           <Tabs />
