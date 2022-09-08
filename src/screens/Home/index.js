@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native"
+import { View, Text, Image, TouchableOpacity } from "react-native"
 import { theme } from "../../global/styles/theme"
 import { LinearGradient } from "expo-linear-gradient"
 import { styles } from "./styles"
@@ -7,8 +7,11 @@ import { Requests } from "./components/views/requests"
 import { MyAds } from "./components/views/myAds"
 import { NextEvents } from "./components/views/nextEvents"
 import { StateGlobal } from "../../context/context"
+import { useNavigation } from "@react-navigation/native"
+import { Headers } from "../../components/Header"
 
 export function Home() {
+  const navigation = useNavigation()
   const { primary, secondary } = theme.colors
   const { components } = StateGlobal()
 
@@ -20,13 +23,8 @@ export function Home() {
         start={{ x: 0.0, y: 0.45 }}
         end={{ x: 1, y: 0 }}
       >
-        <View style={styles.header}>
-          <Image
-            style={styles.logo}
-            source={require("../../assets/images/newLogo.png")}
-            resizeMode="contain"
-          />
-        </View>
+        
+      <Headers />
 
         <View style={styles.containerTabs}>
           <Tabs />
@@ -40,7 +38,6 @@ export function Home() {
           ) : (
             ""
           )}
-
         </View>
       </LinearGradient>
     </View>

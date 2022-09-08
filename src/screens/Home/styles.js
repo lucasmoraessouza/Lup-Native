@@ -9,12 +9,31 @@ export const styles = StyleSheet.create({
   },
   header: {
     marginTop: 35,
+    flexDirection: "row",
     alignItems: "center",
   },
+
   logo: {
     width: 80,
     height: 80,
   },
+
+  containerLogo: {
+    width: "50%",
+    alignItems: "center",
+
+  },
+
+  containerMenu: {
+    width: "25%",
+    alignItems: "center",
+  },
+
+  menu: {
+    width: 50,
+    height: 50,
+  },
+
   containerTabs: {
     backgroundColor: "#fff",
     width: "100%",

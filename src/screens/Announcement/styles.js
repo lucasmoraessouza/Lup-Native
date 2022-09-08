@@ -10,7 +10,6 @@ export const styles = StyleSheet.create({
         width: "100%",
     },
     header: {
-        marginTop: 35,
         alignItems: "center",
     },
     logo: {
