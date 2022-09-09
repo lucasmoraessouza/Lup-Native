@@ -11,8 +11,14 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import { ModalAddProducts } from "./components/ModalAddProducts"
+import { ModalSendBudget } from "./components/ModalSendBudget"
+import { useState } from "react"
+
 export function Calculate() {
     const { primary, secondary } = theme.colors
+    const [isVisible, setIsVisible] = useState(false)
+    const [isVisibleBudget, setIsVisibleBudget] = useState(false)
 
     return (
         <View style={styles.container}>
@@ -45,7 +51,7 @@ export function Calculate() {
                             <Text style={styles.subtitle}>Produtos e serviços</Text>
                             <ProductsAndServices />
                             <ProductsAndServices />
-                            <Text style={styles.textMoreProducts}>+ Adicionar produto ou serviço</Text>
+                            <Text style={styles.textMoreProducts} onPress={() => setIsVisible(true)}>+ Adicionar produto ou serviço</Text>
                         </View>
                         <View style={styles.containerPaymentMethods}>
                             <Text style={styles.subtitle}>Tipo de pagamento</Text>
@@ -67,8 +73,8 @@ export function Calculate() {
                             <TouchableOpacity style={styles.buttonOutlined}>
                                 <Text style={styles.buttonTextOutlined}>Salvar</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.button}>
-                                <Text style={styles.buttonText}>Enviar e salvar</Text>
+                            <TouchableOpacity style={styles.button} onPress={() => setIsVisibleBudget(true)}>
+                                <Text style={styles.buttonText} >Enviar e salvar</Text>
                             </TouchableOpacity>
                         </View>
                         <View style={styles.containerCancel}>
@@ -76,6 +82,8 @@ export function Calculate() {
                             <Ionicons name="trash-bin" size={14} color="#ED4C67" />
                             <Text style={styles.textCancel}>Cancelar orçamento</Text>
                         </View>
+                        <ModalAddProducts isVisible={isVisible} setIsVisible={setIsVisible} />
+                        <ModalSendBudget isVisibleBudget={isVisibleBudget} setIsVisibleBudget={setIsVisibleBudget} />
 
                     </View>
                 </ScrollView>
