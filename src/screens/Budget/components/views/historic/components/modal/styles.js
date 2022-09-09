@@ -14,20 +14,29 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.white,
     padding: 20,
     borderRadius: 25,
-    height: "80%",
+    height: "90%",
+  },
+
+  modalContainerDelete: {
+    width: "95%",
+    backgroundColor: theme.colors.white,
+    padding: 20,
+    borderRadius: 25,
+    height: "auto",
   },
 
   containerCloseModal: {
     width: "100%",
     alignItems: "flex-end",
-    marginRight: 50,
     height: 25,
   },
 
   closeModal: {
+    width: 40,
+    height: 40,
     fontFamily: theme.fonts.title700,
     color: theme.colors.purple,
-    fontSize: 20,
+    fontSize: 25,
   },
 
   containerTitle: {
@@ -43,7 +52,7 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: theme.fonts.title700,
     color: theme.colors.purple,
-    marginTop: 20,
+    marginTop: 10,
   },
 
   infoBold: {
@@ -93,8 +102,9 @@ export const styles = StyleSheet.create({
   },
 
   button: {
+    flexDirection: "row",
     backgroundColor: theme.colors.secondary,
-    width: "100%", 
+    width: "100%",
     borderRadius: 25,
     paddingVertical: 15,
     marginTop: 8,
@@ -103,13 +113,14 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     color: theme.colors.white,
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: theme.fonts.title700,
   },
 
   buttonCancel: {
+    flexDirection: "row",
     backgroundColor: theme.colors.white,
-    width: "100%", 
+    width: "100%",
     borderRadius: 25,
     paddingVertical: 15,
     marginTop: 8,
@@ -118,8 +129,72 @@ export const styles = StyleSheet.create({
   },
   buttonTextCancel: {
     color: theme.colors.line,
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: theme.fonts.title700,
   },
+
+  iconSpace: {
+    margin: 5,
+  },
+
+  containerPhoto: {
+    alignItems: "center",
+  },
+
+  title: {
+    fontSize: 18,
+    fontFamily: theme.fonts.title600,
+    color: theme.colors.gray,
+  },
+
+  content: {
+    paddingVertical: 30,
+  },
+  text: {
+    fontFamily: theme.fonts.title600,
+    fontSize: 14,
+    color: theme.colors.gray,
+    textAlign: "center",
+  },
+
+  containerModalBtn: {
+    flexDirection: "row",
+    justifyContent: 'center',
+},
+
+modalButtonCancel: {
+  width: 140,
+  borderRadius: 25,
+  paddingVertical: 10,
+  marginTop: 8,
+  justifyContent: "center",
+  alignItems: "center",
+  borderColor: theme.colors.gray,
+  borderStyle: "solid",
+  borderWidth: 1,
+  borderRadius: 22,
+  marginRight: 10,
+},
+modalButtonCancelText: {
+  color: theme.colors.gray,
+  fontSize: 15,
+  fontFamily: theme.fonts.text400,
+},
+
+buttonPlus: {
+  width: 140,
+  borderRadius: 25,
+  paddingVertical: 10,
+  marginTop: 8,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: theme.colors.line,
+},
+buttonPlusText: {
+  color: theme.colors.white,
+  fontSize: 15,
+  fontFamily: theme.fonts.text400,
+},
+
 
 })
