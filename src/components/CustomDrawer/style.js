@@ -4,6 +4,7 @@ export const Content = styled.View`
     background-color: '#9980FA';
     padding: 40px 40px;
     margin: 0;
+    margin-top: 0;
 `
 
 export const ContainerTitle = styled.View`

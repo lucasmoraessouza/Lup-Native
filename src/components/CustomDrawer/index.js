@@ -14,7 +14,7 @@ export function CustomDrawer(props) {
                     <S.Title >Olá, Felipe</S.Title>
                     <S.Icon><S.IconText>pro</S.IconText></S.Icon>
                 </S.ContainerTitle>
-                <S.Subtitle >Editar Perfil</S.Subtitle>
+                <S.Subtitle ></S.Subtitle>
             </S.Content>
             <S.ContainerMenu >
                 <DrawerItemList {...props} />

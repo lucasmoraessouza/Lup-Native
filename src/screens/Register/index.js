@@ -12,7 +12,7 @@ export function Register() {
   const { primary, secondary } = theme.colors
 
   return (
-    <Animatable.View style={styles.container} animation="fadeInLeft">
+    <Animatable.View style={styles.container} >
       <LinearGradient style={styles.linear} colors={[secondary, primary]} start={{ x: 0.0, y: 0.45 }} end={{ x: 1, y: 0 }}>
         <Animatable.View style={styles.header} animation="flipInY" delay={600}>
           <Image
@@ -20,7 +20,7 @@ export function Register() {
             style={styles.logo}
           />
         </Animatable.View>
-        <View style={styles.containerForm}>
+        <Animatable.View style={styles.containerForm} animation="fadeInUp" >
           <Text style={styles.infoText}>Criar nova conta</Text>
           <TextInput
             placeholder="Nome Completo"
@@ -48,7 +48,7 @@ export function Register() {
           <TouchableOpacity style={styles.buttonOutlined} onPress={() => navigation.navigate("Login")}>
             <Text style={styles.buttonTextOutlined} >Voltar</Text>
           </TouchableOpacity>
-        </View>
+        </Animatable.View>
       </LinearGradient>
     </Animatable.View>
   )
