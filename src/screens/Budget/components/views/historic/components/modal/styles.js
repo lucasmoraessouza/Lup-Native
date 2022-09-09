@@ -2,61 +2,6 @@ import { StyleSheet } from "react-native"
 import { theme } from "../../../../../../../global/styles/theme"
 
 export const styles = StyleSheet.create({
-  titleInfo: {
-    fontSize: 20,
-    fontFamily: theme.fonts.title600,
-  },
-
-  subTitleInfo: {
-    fontSize: 15,
-    fontFamily: theme.fonts.text400,
-  },
-
-  imgClient: {
-    width: 100,
-    height: 100,
-    marginTop: 10,
-    marginBottom: 10,
-  },
-
-  containerBtn: {
-    alignItems: "flex-end",
-  },
-
-  buttonPlus: {
-    width: 140,
-    borderRadius: 25,
-    paddingVertical: 10,
-    marginTop: 8,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#C4E538",
-  },
-  buttonPlusText: {
-    color: theme.colors.white,
-    fontSize: 15,
-    fontFamily: theme.fonts.text400,
-  },
-
-  buttonCancel: {
-    width: 140,
-    borderRadius: 25,
-    paddingVertical: 10,
-    marginTop: 8,
-    justifyContent: "center",
-    alignItems: "center",
-    borderColor: "#a8a8a8",
-    borderStyle: "solid",
-    borderWidth: 1,
-    borderRadius: 22,
-    marginRight: 10,
-  },
-  buttonCancelText: {
-    color: "#a8a8a8",
-    fontSize: 15,
-    fontFamily: theme.fonts.text400,
-  },
-
   modalBackGround: {
     flex: 1,
     justifyContent: "center",
@@ -65,18 +10,44 @@ export const styles = StyleSheet.create({
   },
 
   modalContainer: {
-    width: "85%",
+    width: "95%",
     backgroundColor: theme.colors.white,
     padding: 20,
     borderRadius: 25,
+    height: "80%",
   },
 
-  containerPhoto: {
+  containerCloseModal: {
+    width: "100%",
+    alignItems: "flex-end",
+    marginRight: 50,
+    height: 25,
+  },
+
+  closeModal: {
+    fontFamily: theme.fonts.title700,
+    color: theme.colors.purple,
+    fontSize: 20,
+  },
+
+  containerTitle: {
     alignItems: "center",
   },
 
-  containerModalBtn: {
-    flexDirection: "row",
+  titleInfo: {
+    fontSize: 20,
+    fontFamily: theme.fonts.title700,
+  },
+
+  subTitleInfo: {
+    fontSize: 20,
+    fontFamily: theme.fonts.title700,
+    color: theme.colors.purple,
+    marginTop: 20,
+  },
+
+  infoBold: {
+    fontWeight: "bold",
   },
 
   containerModalInfo: {
@@ -90,5 +61,65 @@ export const styles = StyleSheet.create({
     width: "40%",
     alignItems: "flex-start",
     justifyContent: "flex-start",
+    flexWrap: "wrap",
   },
+
+  subDataCardInfo: {
+    width: 300,
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+  },
+
+  subDataInfo: {
+    width: "auto",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    flexWrap: "wrap",
+    paddingRight: 12,
+  },
+
+  titleFinancial: {
+    fontFamily: theme.fonts.title700,
+    fontSize: 20,
+    margin: 14,
+  },
+
+  containerBlur: {
+    width: "100%",
+    height: 200,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 10,
+  },
+
+  button: {
+    backgroundColor: theme.colors.secondary,
+    width: "100%", 
+    borderRadius: 25,
+    paddingVertical: 15,
+    marginTop: 8,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  buttonText: {
+    color: theme.colors.white,
+    fontSize: 20,
+    fontFamily: theme.fonts.title700,
+  },
+
+  buttonCancel: {
+    backgroundColor: theme.colors.white,
+    width: "100%", 
+    borderRadius: 25,
+    paddingVertical: 15,
+    marginTop: 8,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  buttonTextCancel: {
+    color: theme.colors.line,
+    fontSize: 20,
+    fontFamily: theme.fonts.title700,
+  },
+
 })
