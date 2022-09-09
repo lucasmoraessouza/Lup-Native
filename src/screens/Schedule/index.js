@@ -8,15 +8,16 @@ import {
   Calendar as CustomCalendar,
   LocaleConfig,
 } from "react-native-calendars"
-
+import { ModalInfoEvent } from "../../components/ModalInfoEvent"
 import { ptBR } from "./components/localeConfig"
+import { useState } from "react"
 
 LocaleConfig.locales["pt-BR"] = ptBR
 LocaleConfig.defaultLocale = "pt-BR"
 
 export function Schedule() {
   const { primary, secondary } = theme.colors
-
+  const [isVisible, setIsVisible] = useState(false)
   const vacation = { key: "vacation", color: "red", selectedDotColor: "blue" }
   const massage = { key: "massage", color: "blue", selectedDotColor: "blue" }
   const workout = { key: "workout", color: "green" }
@@ -114,6 +115,7 @@ export function Schedule() {
                         name="plus"
                         size={30}
                         color={theme.colors.white}
+                        onPress={() => setIsVisible(true)}
                       />
                     </View>
 
@@ -130,12 +132,14 @@ export function Schedule() {
                         name="plus"
                         size={30}
                         color={theme.colors.white}
+                        onPress={() => setIsVisible(true)}
                       />
                     </View>
                   </View>
                 )
               })}
             </View>
+            <ModalInfoEvent setIsVisible={setIsVisible} isVisible={isVisible} />
           </ScrollView>
         </View>
       </LinearGradient>
