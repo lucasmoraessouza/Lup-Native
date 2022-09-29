@@ -4,10 +4,55 @@ import { styles } from "./styles"
 import { theme } from "../../global/styles/theme"
 import { useNavigation } from "@react-navigation/native"
 import * as Animatable from 'react-native-animatable'
+import { useState } from "react"
+import { api } from '../../services/index'
+import { StateGlobal } from '../../context/context'
+import Toast from 'react-native-toast-message'
+import { Button } from "../../components/Button"
 
 export function Login() {
   const navigation = useNavigation()
   const { primary, secondary } = theme.colors
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const { setIsAuthenticated } = StateGlobal()
+
+  const showToast = ({ type, title, text }) => {
+    Toast.show({
+      type,
+      text1: title,
+      text2: text ? text : ''
+    });
+  }
+
+  async function handleSubmit() {
+    try {
+      setIsLoading(true)
+      const res = await api.post('api/anunciante/login', {
+        email,
+        password
+      })
+      if (res.data.error === "false") {
+        showToast({ type: res.data.error === 'false' ? 'success' : 'error', title: res.data.message })
+        setTimeout(() => {
+          setIsAuthenticated(true)
+          setIsLoading(false)
+        }, 500)
+      } else {
+        setIsLoading(false)
+        setIsAuthenticated(false)
+        showToast({ type: res.data.error === 'true' ? 'error' : 'success', title: res.data.message })
+      }
+    } catch (err) {
+      setIsLoading(false)
+      console.log('err', err)
+    }
+  }
+
+  function handlePress() {
+    console.log('teste');
+  }
 
   return (
     <Animatable.View style={styles.container} >
@@ -23,25 +68,25 @@ export function Login() {
             placeholder="E-mail"
             style={styles.input}
             placeholderTextColor={theme.colors.white}
+            value={email}
+            onChangeText={(value) => setEmail(value)}
           />
           <TextInput
             placeholder="Senha"
             style={styles.input}
             placeholderTextColor={theme.colors.white}
+            value={password}
+            onChangeText={(value) => setPassword(value)}
+
           />
           <Text style={styles.passwordText} onPress={() => navigation.navigate("ForgotPassword")}>Esqueci minha senha</Text>
-          <TouchableOpacity
-            onPress={() => navigation.navigate("Home")}
-            style={styles.button}
-          >
-            <Text style={styles.buttonText}>Entrar</Text>
-          </TouchableOpacity>
+          <Button text="Entrar" onPress={handleSubmit} isLoading={isLoading} disabled={isLoading} />
           <Text style={styles.infoText} >Ou faça login usando</Text>
           <View style={styles.containerButtons}>
             <TouchableOpacity style={styles.buttonFacebook}>
               <Text style={styles.buttonTextFacebook}>Facebook</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.buttonGoogle}>
+            <TouchableOpacity style={styles.buttonGoogle} >
               <Text style={styles.buttonTextGoogle}>Google</Text>
             </TouchableOpacity>
           </View>
@@ -55,7 +100,7 @@ export function Login() {
             </Text>
           </View>
         </Animatable.View>
-      </LinearGradient>
-    </Animatable.View>
+      </LinearGradient >
+    </Animatable.View >
   )
 }

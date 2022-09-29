@@ -1,10 +1,13 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { StateGlobal } from '../../context/context'
 
 export function Logout() {
-    return (
-        <View>
-            <Text>Logout</Text>
-        </View>
-    )
+    const { setIsAuthenticated } = StateGlobal()
+
+    useEffect(() => {
+        setIsAuthenticated(false)
+    }, [])
+
+    return (<></>)
 }
