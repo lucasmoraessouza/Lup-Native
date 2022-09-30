@@ -5,10 +5,12 @@ import { theme } from "../../global/styles/theme"
 import { useNavigation } from "@react-navigation/native"
 import * as Animatable from 'react-native-animatable'
 import { useState } from "react"
-import { api } from '../../services/index'
+import { api } from '../../services'
 import { StateGlobal } from '../../context/context'
 import Toast from 'react-native-toast-message'
 import { Button } from "../../components/Button"
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 export function Login() {
   const navigation = useNavigation()
@@ -33,9 +35,11 @@ export function Login() {
         email,
         password
       })
+
       if (res.data.error === "false") {
         showToast({ type: res.data.error === 'false' ? 'success' : 'error', title: res.data.message })
         setTimeout(() => {
+          AsyncStorage.setItem('token', res.data.token)
           setIsAuthenticated(true)
           setIsLoading(false)
         }, 500)
@@ -48,10 +52,6 @@ export function Login() {
       setIsLoading(false)
       console.log('err', err)
     }
-  }
-
-  function handlePress() {
-    console.log('teste');
   }
 
   return (

@@ -6,6 +6,7 @@ export default function CountProvider({ children }) {
   const [components, setComponents] = useState(0)
   const [subComponents, setSubComponents] = useState(0)
   const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [dataUser, setDataUser] = useState([])
 
   return (
     <RegisterContext.Provider
@@ -15,7 +16,9 @@ export default function CountProvider({ children }) {
         subComponents,
         setSubComponents,
         isAuthenticated,
-        setIsAuthenticated
+        setIsAuthenticated,
+        dataUser,
+        setDataUser
       }}
     >
       {children}
@@ -28,6 +31,7 @@ export function StateGlobal() {
   const { components, setComponents } = context
   const { subComponents, setSubComponents } = context
   const { isAuthenticated, setIsAuthenticated } = context
+  const { dataUser, setDataUser } = context
 
   return {
     components,
@@ -35,6 +39,8 @@ export function StateGlobal() {
     subComponents,
     setSubComponents,
     isAuthenticated,
-    setIsAuthenticated
+    setIsAuthenticated,
+    dataUser,
+    setDataUser
   }
 }

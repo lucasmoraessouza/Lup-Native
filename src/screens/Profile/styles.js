@@ -55,7 +55,8 @@ export const styles = StyleSheet.create({
         marginBottom: 12,
         fontSize: 16,
         fontFamily: theme.fonts.text400,
-        color: theme.colors.white,
+        color: theme.colors.gray,
+        paddingHorizontal: 10,
     },
     button: {
         backgroundColor: theme.colors.on,
