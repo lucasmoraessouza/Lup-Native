@@ -97,6 +97,7 @@ export function Register() {
             placeholderTextColor={theme.colors.white}
             value={data_user.password}
             onChangeText={(value) => setData_user({ ...data_user, password: value })}
+            secureTextEntry={true}
 
           />
           <TextInput
@@ -105,6 +106,8 @@ export function Register() {
             placeholderTextColor={theme.colors.white}
             value={aux_password}
             onChangeText={(value) => setAux_password(value)}
+            secureTextEntry={true}
+
           />
           <Button text="Criar conta" onPress={handleSubmit} isLoading={isLoading} disabled={disabled} />
           <TouchableOpacity style={styles.buttonOutlined} onPress={() => navigation.navigate("Login")}>

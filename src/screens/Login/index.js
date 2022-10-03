@@ -77,6 +77,7 @@ export function Login() {
             placeholderTextColor={theme.colors.white}
             value={password}
             onChangeText={(value) => setPassword(value)}
+            secureTextEntry={true}
 
           />
           <Text style={styles.passwordText} onPress={() => navigation.navigate("ForgotPassword")}>Esqueci minha senha</Text>
