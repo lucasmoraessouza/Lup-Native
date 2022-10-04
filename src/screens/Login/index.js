@@ -45,7 +45,7 @@ export function Login() {
         }, 500)
       } else {
         setIsLoading(false)
-        setIsAuthenticated(false)
+        // setIsAuthenticated(false)
         showToast({ type: res.data.error === 'true' ? 'error' : 'success', title: res.data.message })
       }
     } catch (err) {

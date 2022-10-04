@@ -11,6 +11,7 @@ export function ButtonGreen({ text, onPress, isLoading = false, disabled }) {
                 {isLoading ? <ActivityIndicator color={theme.colors.secondary} /> :
                     <Text style={styles.buttonText}>{text}</Text>}
             </TouchableOpacity>
+            
         </>
     )
 }

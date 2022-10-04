@@ -81,16 +81,15 @@ export const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: theme.colors.on,
-        width: 160,
+        width: 155,
         height: 50,
         borderRadius: 25,
-        paddingVertical: 15,
         justifyContent: "center",
         alignItems: "center",
         textAlign: 'center',
     },
     buttonOutlined: {
-        width: 160,
+        width: 155,
         height: 50,
         background: 'transparent',
         color: theme.colors.on,
@@ -99,8 +98,6 @@ export const styles = StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 1,
         borderRadius: 25,
-        paddingVertical: 15,
-
         justifyContent: "center",
         alignItems: "center",
         textAlign: 'center'
