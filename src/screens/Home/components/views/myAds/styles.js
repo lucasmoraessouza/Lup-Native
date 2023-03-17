@@ -14,8 +14,9 @@ export const styles = StyleSheet.create({
         alignItems: 'center'
     },
     logo: {
-        width: 100,
-        height: 100,
+        width: 116,
+        height: 116,
+        borderRadius: 116 / 2
     },
     contentHeader: {
         flexDirection: 'column',
@@ -23,17 +24,17 @@ export const styles = StyleSheet.create({
     title: {
         color: theme.colors.primary,
         fontFamily: theme.fonts.title600,
-        fontSize: 20,
+        fontSize: 18,
     },
     subtitle: {
         color: theme.colors.gray,
         fontFamily: theme.fonts.title600,
-        fontSize: 15,
+        fontSize: 13,
     },
     text: {
         color: theme.colors.gray,
         fontFamily: theme.fonts.text400,
-        fontSize: 15,
+        fontSize: 13,
     },
     containerTabs: {
         flexDirection: 'row'

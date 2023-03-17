@@ -10,13 +10,11 @@ export function PhotosAndVideos({ data }) {
     return (
         <>
             <View style={styles.container}>
-                <TouchableOpacity onPress={() => {
-                    setIsVisible(true)
-                }}>
-
-                    <Image source={require('../../assets/images/example.png')} resizeMode="contain" style={styles.image} />
+                <TouchableOpacity onPress={() => {setIsVisible(true)}} >
+                    <Image source={{ uri: data.url }} resizeMode="cover" style={styles.image} />
                 </TouchableOpacity>
             </View>
+
             <ModalDeletePhoto setIsVisible={setIsVisible} isVisible={isVisible} />
         </>
     );
