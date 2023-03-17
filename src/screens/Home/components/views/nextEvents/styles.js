@@ -1,22 +1,27 @@
 import { StyleSheet } from "react-native"
 export const styles = StyleSheet.create({
   container: {
-    paddingBottom: 350,
+    paddingBottom: 50,
     // flex: 1,
-    // justifyContent: "space-between",
-    // flexDirection: "column",
+    flexDirection: "column",
+    zIndex: 5,
   },
   filter: {
     flex: 1,
+    backgroundColor: "red",
     flexDirection: "row",
     alignItems: "center",
+    maxHeight: 60,
+    // width: "100%",
+    zIndex: 10,
+    justifyContent: "space-between",
+    // marginBottom: 100,
   },
   picker: {
-    height: 30,
+    // height: 30,
     width: 150,
-    flex: 1,
-    // margin: "0",
-    // padding: "0px",
-    justifyContent: "flex-start",
+    // flex: 1,
+    // margin: "0 5px",
+    padding: 0,
   },
 })
