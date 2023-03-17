@@ -41,35 +41,39 @@ export function NextEvents() {
     <>
       <View style={styles.filter}>
         <Text>Exibir:</Text>
-        <DropDownPicker
-          open={open}
-          value={days}
-          items={items}
-          setOpen={setOpen}
-          // setVal={setDays}
-          // setItems={setItems}
-          onSelectItem={({ value }) => setDays(value)}
-          style={styles.picker}
-        />
-      </View>
-      <View style={styles.container}>
-        <View>
-          <FlatList
-            showsVerticalScrollIndicator={false}
-            data={events}
-            keyExtractor={(events) => events.id.toString()}
-            renderItem={({ item: events }) => (
-              <Timeline
-                day={events?.day}
-                month={events?.month}
-                color={events?.type === "solicitacao" ? "#9980FA" : "#31D0CC"}
-                title={events?.evento}
-                city={events?.location.city}
-                state={events?.location.uf}
-              />
-            )}
+        <View style={styles.pickerWrapper}>
+          <DropDownPicker
+            open={open}
+            value={days}
+            items={items}
+            setOpen={setOpen}
+            // setVal={setDays}
+            // setItems={setItems}
+            onSelectItem={({ value }) => setDays(value)}
+            style={styles.picker}
+            textStyle={{
+              color: "#9980FA",
+            }}
           />
         </View>
+      </View>
+      <View style={styles.container}>
+        <FlatList
+          style={styles.list}
+          showsVerticalScrollIndicator={false}
+          data={events}
+          keyExtractor={(events) => events.id.toString()}
+          renderItem={({ item: events }) => (
+            <Timeline
+              day={events?.day}
+              month={events?.month}
+              color={events?.type === "solicitacao" ? "#9980FA" : "#31D0CC"}
+              title={events?.evento}
+              city={events?.location.city}
+              state={events?.location.uf}
+            />
+          )}
+        />
       </View>
     </>
   )

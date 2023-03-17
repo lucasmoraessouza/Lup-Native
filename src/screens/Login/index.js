@@ -14,8 +14,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage"
 export function Login() {
   const navigation = useNavigation()
   const { primary, secondary } = theme.colors
-  const [email, setEmail] = useState("jonhwick@gmail.com")
-  const [password, setPassword] = useState("123123")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const { setIsAuthenticated } = StateGlobal()
 
